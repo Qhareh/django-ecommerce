@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home,contact,about, shop, sign_in, sign_up
+from .views import *
 urlpatterns = [
     path('',home, name="home"),
     path('contact',contact, name="contact"),
@@ -7,4 +7,6 @@ urlpatterns = [
     path('shop',shop, name="shop"),
     path('sign_in',sign_in, name="sign_in"),
     path('sign_up',sign_up, name="sign_up"),
+    path('contact/form/submit', submitContactForm, name="contact.form"),
+    path('form/success', successRedirect, name="success.redirect")
   ]
