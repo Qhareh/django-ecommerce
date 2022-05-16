@@ -1,18 +1,18 @@
 {% extends 'layouts/base.html' %}
-
+{% load static %}
 
 {% block content %}
 
 <div class="container">
-    <div class="row mt-5 justify-content-center text-center">
-        <div class="col-lg-10">
-            <h2 class="mb-3">Search for products </h2>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="search products..." aria-label="product's name"
-                    aria-describedby="button-addon2"> 
-                <button class="btn btn-danger" type="button" id="button-addon2"><i class="fa fa-search text-light" aria-hidden="true"></i></button>
-
-            </div>
+    <div class="row justify-content-center text-center mt-5">
+        <div class="col-lg-6 mt-5">
+            <h3 class="mt-5 mb-4">Buy Best products from <br> All of the world</h3>
+            <h5 class="mt-5 text-danger">Exciting deals on Products</h5>
+            <p class="text-danger">Get flat <span class="fw-bolder">10%</span> cashback</p>
+           
+        </div>
+        <div class="col-lg-6 ">
+            <img class="img-fluid" src="{% static 'images/landing.jpg' %}">
         </div>
     </div>
 </div>
