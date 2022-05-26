@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'shop.apps.ShopConfig',
+    'staff.apps.StaffConfig'
 ]
 
 MIDDLEWARE = [
@@ -120,7 +122,8 @@ STATIC_URL = 'static/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'shop/static/')
+    os.path.join(BASE_DIR, 'shop/static/'),
+    os.path.join(BASE_DIR, 'staff/static/'),
 ]
 
 MEDIA_URL = '/media/'
