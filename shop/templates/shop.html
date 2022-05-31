@@ -1,18 +1,42 @@
 {% extends 'layouts/base.html' %}
 
+{% block css %}
+
+{% endblock %}
 
 {% block content %}
 
 <div class="container">
     <div class="row mt-5 justify-content-center text-center">
         <div class="col-lg-10">
-            <h2 class="mb-3">Search for products </h2>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="search products..." aria-label="product's name"
-                    aria-describedby="button-addon2"> 
-                <button class="btn btn-danger" type="button" id="button-addon2"><i class="fa fa-search text-light" aria-hidden="true"></i></button>
+            <h2 class="mb-3">Search for product </h2>
+            <form action="{% url 'search' %}" method="post">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <input type="search" name="query" class="form-control" placeholder="search for product" aria-label="Recipient's username"
+                        aria-describedby="button-addon2">
+                    <button class="btn btn-danger" type="button">Search</button>
+    
+                </div>
 
+            </form>
+        </div>
+        <div class="row justify-content-center mt-5">
+
+            {% for product in products %}
+    
+            <div class="col-lg-4">
+                <div class="card">
+                    <img class="img-fluid" src="{{product.image.url}}">
+                    <div class="card-body">
+                        <span class="badge bg-warning">{{product.category.name}}</span>
+                        <h6>{{product.name}}</h6>
+                        <small>{{product.description | truncatewords:10}}</small>
+                    </div>
+                </div>
             </div>
+    
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -20,5 +44,5 @@
 {% endblock %}
 
 {% block scripts %}
-
+b
 {% endblock %}

@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, JsonResponse
+from staff.models import *
+from django.contrib import messages
 
 # Create your views here.
 
 
 def home(request):
-    context = {}
+    products = Product.objects.filter(status = Product.LIVE)
+    context = {
+        "products": products
+    }
     return render (request, "index.html",context)
 
 def contact(request):
@@ -18,7 +23,10 @@ def about(request):
 
 
 def shop(request):
-    context = {}
+    products = Product.objects.filter(status = Product.LIVE)
+    context = {
+        "products": products
+    }
     return render (request, "shop.html",context)
 
 def sign_in(request):
@@ -64,3 +72,39 @@ def ajaxContactSubmission(request):
     }
 
     return JsonResponse(context)
+
+def getProductDetails(request, id):
+
+    try:
+        product = Product.objects.get(pk=id)
+    except Product.DoesNotExist:
+
+        messages.info("Sorry, that product does not exist")
+        return HttpResponseRedirect("/")
+
+    categories =Category.objects.all()
+    all_products = Product.objects.exclude(pk=id)
+
+    context = {
+        "product":product,
+        "categories": categories,
+        "more_products": all_products
+    }
+
+    return render(request, "product-details.html", context) 
+
+def searchProducts(request):
+
+    query = request.POST["query"]
+
+    articles = Product.objects.filter(
+        status = Product.LIVE).filter(name__contains=query).filter(
+            category__contains = query
+        )  
+        
+
+    context = {
+        "products": articles
+    } 
+
+    return render(request, "shop.html", context)    

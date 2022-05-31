@@ -15,6 +15,15 @@
             <img class="img-fluid" src="{% static 'images/landing.jpg' %}">
         </div>
     </div>
+    <h3>Most Popular</h3>
+    <div class="row justify-content-center mt-5">
+
+        {% for product in products %}
+
+        {% include 'layouts/products.html' %}
+
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

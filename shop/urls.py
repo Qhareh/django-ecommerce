@@ -9,6 +9,8 @@ urlpatterns = [
     path('sign_up',sign_up, name="sign_up"),
     path('contact/form/submit', submitContactForm, name="contact.form"),
     path('form/success', successRedirect, name="success.redirect"),
-    path("ajax/contact/submission", ajaxContactSubmission, name="contact.ajax.submission")
+    path("ajax/contact/submission", ajaxContactSubmission, name="contact.ajax.submission"),
+    path("product/<id>/details", getProductDetails, name="product.details"),
+    path("search/products", searchProducts, name="search")
   ]
 
