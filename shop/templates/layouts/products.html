@@ -1,11 +1,12 @@
 <div class="col-lg-3">
-    <div class="card h-100 mb-4">
+    <div class="card h-100 mb-4 shadow-lg border-0">
         <div class="card-body ">
-            <span class="badge bg-danger">{{product.category.name}}</span>
-            <h6>{{product.name}}</h6>
+           
             <img src="{{product.image.url}}" class="img-fluid">
-            <small>{{product.description | truncatewords:10}}</small><br>
-            <a href="{% url 'product.details' product.id %}" class="btn btn-danger btn-sm">Details</a>
+            <h6>{{product.name}}</h6>
+            <small>{{product.description | truncatewords:5}}</small><br>
+            <small>${{product.price}}</small><br>
+            <a href="{% url 'product.details' product.id %}" class="btn btn-primary btn-sm">Details</a>
              </div>
     </div>
 </div>
