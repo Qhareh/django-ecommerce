@@ -97,14 +97,14 @@ def searchProducts(request):
 
     query = request.POST["query"]
 
-    articles = Product.objects.filter(
+    products = Product.objects.filter(
         status = Product.LIVE).filter(name__contains=query).filter(
             category__contains = query
         )  
         
 
     context = {
-        "products": articles
+        "products": products
     } 
 
     return render(request, "shop.html", context)    

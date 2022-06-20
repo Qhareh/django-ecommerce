@@ -30,3 +30,18 @@ def categories(request):
 
     return render(request, "category.html", context)
 
+def products(request):
+
+    products = Product.objects.all()
+
+    context = {
+        "products" : products
+    }  
+
+    return render(request, "product.html", context) 
+
+def reviews(request):
+
+    messages = Review.objects.all()
+
+    return render(request, "review.html", {'messages': messages}) 
