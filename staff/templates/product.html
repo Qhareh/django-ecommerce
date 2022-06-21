@@ -13,7 +13,7 @@
             <div class="card-body">
                 <div class=" d-flex flex-row">
                     <h6>All products</h6>
-                    <a href="" class="btn btn-primary btn-sm ms-2">Create</a>
+                    <a href="{% url 'product.create' %}" class="btn btn-primary btn-sm ms-2">Create</a>
                 </div>
                 <hr>
 
@@ -38,8 +38,8 @@
                             <td>{{product.quantity}}</td>
                             <td>
                                
-                                <a href="" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
-                                <button onclick="deleteArticle('{{product.id}}') " class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                <a href="{% url 'update.product' product.id %}" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
+                                <button onclick="deleteProduct('{{product.id}}') " class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
                         {% endfor %}
@@ -57,11 +57,11 @@
 
 <script>
 
-    function deleteArticle(id){
+    function deleteProduct(id){
         
         if(confirm("Are you sure you want to delete this article")){
             $.ajax({
-                url: "/staff/delete/article/"+id,
+                url: "/staff/delete/product/"+id,
                 dataType: "json",
                 method: "GET",
                 success: function(data){
