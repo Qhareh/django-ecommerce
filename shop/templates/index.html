@@ -4,22 +4,22 @@
 {% block content %}
 
 <div class="container">
-    <div class="row justify-content-center ms-5 mt-5">
-        <div class="col-lg-6 mt-5">
+    <div class="row justify-content-center ms-5 mt-5 pt-5">
+        <div class="col-lg-6 mt-5 ">
             <h5 class="mt-5">NEW ARRIVALS</h5>
             <h3><span class="text-danger"> Best Price</span> This Year</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, illum corrupti quas dolore nesciunt eos
                 accusamus repudiandae, ducimus iste voluptatibus ipsam vel repellendus quam? Debitis doloribus enim
                 animi officiis error.</p>
-            <button class="btn btn-danger">Explore now <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            <button class="btn btn-danger ">Explore now <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
             </button>
         </div>
         <div class="col-lg-6 mt-5 ">
             <img class="img-fluid  " src="{% static 'images/headset2.jpg' %}">
         </div>
     </div>
-
-    <div class="row justify-content-center mt-5">
+   
+    <div class="row justify-content-center mt-5 pt-5">
         <h4 class="mb-4 text-center">Available offers</h4>
         <div class="col-sm-4 text-center">
             <div class="card">
@@ -47,72 +47,29 @@
         </div>
     </div>
 
-    <div class="row justify-content-center mt-5 text-center">
+    <div class="row justify-content-center mt-5 ">
 
-        <h4 class="fw-bolder mt-3">Featured Products</h4>
-        <p class="mb-5">Here you can check out our new products with fair prices</p>
+        <h4 class="fw-bolder mt-3 text-center">Featured Products</h4>
+        <p class="mb-5 text-center">Here you can check out our new products with fair prices</p>
 
         {% for product in products %}
 
         {% include 'layouts/products.html' %}
 
         {% endfor %}
-
-
-        <!-- <h4 class="mb-4">Categories</h4>  
-
-        {% for product in products %}
-
-        {% include 'layouts/products.html' %}
-
-        {% endfor %} -->
     </div>
-    <div class="row justify-content-center text-center mt-5 ">
+    <div class="row justify-content-center text-center mt-5 offer">
         <div class="col-lg-4">
             <img class="img-fluid w-75" src="static/images/watch1.jpg">
         </div>
         <div class="col-lg-6 mt-5">
             <p>Exclusively Available on E-TechShop</p>
-            <h4>Smart Band 4</h4>
+            <h4>Smart watch 4</h4>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum aliquid quo, aperiam reiciendis
                 laudantium temporibus perspiciatis iure reprehenderit esse adipisci aliquam doloribus totam. </p>
             <button class="btn btn-danger">Buy now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
         </div>
     </div>
-</div>
-<div class="footer bg-dark mt-5 text-secondary">
-   <div class="row justify-content-center ms-5">
-    <div class="col-lg-3 mt-4">
-        <p class="text-light">Contact</p>
-        <p>Kimathi street</p>
-        <p>Nairobi city</p>
-        <p>Phone number: +254788563245</p>
-        <p>Mobile number: 011345667889</p>
-    </div>
-    <div class="col-lg-3 mt-4">
-        <p class="text-light">Menu</p>
-        <p>Home</p>
-        <p>About</p>
-        <p>Products</p>
-        <p>Blog</p>
-        <p>Contact</p>
-    </div>
-    <div class="col-lg-3 mt-4">
-        <p class="text-light">Useful Links</p>
-        <p>Blog post</p>
-        <p>Return Policy</p>
-        <p>Coupons</p>
-       
-    </div>
-    <div class="col-lg-3 mt-4">
-        <p class="text-light">Follow Us</p>
-        <p>Facebook</p>
-        <p>Twitter</p>
-        <p>Instagram</p>
-        <p>Youtube</p>
-    </div>
-    <p class="text-light text-center me-5">&copy; 2022 E-TechShop. All rights reserved.</p>
-   </div>
 </div>
 
 {% endblock %}

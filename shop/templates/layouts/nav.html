@@ -13,6 +13,11 @@
           </li>
           <li class="nav-item">
             <a class="nav-link
+            {% if 'shop' in request.path %} active-nav {% endif %}
+            " href="{% url 'shop' %}">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link
             {% if 'about' in request.path %} active-nav {% endif %}
             " href="{% url 'about' %}">About</a>
           </li>
@@ -21,11 +26,7 @@
             {% if 'contact' in request.path %} active-nav {% endif %}
             " href="{% url 'contact' %}">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link
-            {% if 'shop' in request.path %} active-nav {% endif %}
-            " href="{% url 'shop' %}">Shop</a>
-          </li>
+         
           {% if request.user.is_authenticated %}
 
           <li class="nav-item">

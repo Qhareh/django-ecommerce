@@ -1,3 +1,12 @@
 .active-nav{
     color: #dc3545 !important;
 }
+.card{
+    transition: 0.5s
+  }
+.card:hover{
+    transform: scale(0.5 ,1);
+}
+.offer{
+    background: radial-gradient(#fff, #ffd6d6) !important;
+}

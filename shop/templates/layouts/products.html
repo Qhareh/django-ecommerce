@@ -1,11 +1,18 @@
-<div class="col-lg-3">
-    <div class="card mb-4 shadow-lg border-0">
+
+<div class="col-md-3">
+    <div class="card mb-4 shadow-lg border-0 hover-overlay hover-zoom hover-shadow">
         <div class="card-body ">
 
-            <img src="{{product.image.url}}" class="img-fluid">
+            <img src="{{product.image.url}}" class="img-fluid ">
             
             <h6>{{product.category}}</h6>
-            <small>rating</small><br>
+            <div class="rating text-danger">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
             <small>${{product.price}}</small><br>
             
         </div>

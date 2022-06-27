@@ -25,13 +25,19 @@
 
             {% for product in products %}
     
-            <div class="col-lg-4">
+            <div class="col-sm-3 mb-4">
                 <div class="card">
                     <img class="img-fluid" src="{{product.image.url}}">
                     <div class="card-body">
-                        <span class="badge bg-warning">{{product.category.name}}</span>
                         <h6>{{product.name}}</h6>
-                        <small>{{product.description | truncatewords:10}}</small>
+                        <div class="rating text-danger">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <small>${{product.price}}</small><br>
                     </div>
                 </div>
             </div>
@@ -44,5 +50,4 @@
 {% endblock %}
 
 {% block scripts %}
-b
 {% endblock %}
