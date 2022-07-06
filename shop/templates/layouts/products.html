@@ -1,10 +1,8 @@
 
 <div class="col-md-3">
     <div class="card mb-4 shadow-lg border-0 hover-overlay hover-zoom hover-shadow">
-        <div class="card-body ">
-
-            <img src="{{product.image.url}}" class="img-fluid ">
-            
+        <a href="{% url 'product.details' product.id %}"> <img src="{{product.image.url}}" class="img-fluid "></a>
+        <div class="card-body ">  
             <h6>{{product.category}}</h6>
             <div class="rating text-danger">
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -18,3 +16,7 @@
         </div>
     </div>
 </div>
+
+{% block scripts %}
+
+{% endblock %}
