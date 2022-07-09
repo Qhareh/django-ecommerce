@@ -21,9 +21,9 @@ class Category(models.Model):
         return self.name
 
 class Product(models.Model):
-    LIVE = 1
-    OUT_OF_STOCK = 2
-    PENDING = 3
+    LIVE = "In Stock"
+    OUT_OF_STOCK = "Out of Stock"
+    PENDING = "Pending"
 
     PRODUCT_STATUS = (
         (LIVE, "Live"),
@@ -36,7 +36,7 @@ class Product(models.Model):
     description = models.TextField()
     category = models.ForeignKey(Category,on_delete=models.CASCADE, null=True, blank=True)
     quantity = models.IntegerField()
-    status = models.IntegerField(choices= PRODUCT_STATUS, default= LIVE)
+    status = models.TextField(choices= PRODUCT_STATUS, default= LIVE)
 
     def __str__(self):
         return self.name

@@ -4,20 +4,33 @@
 {% block content %}
 
 <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-5 mb-4">
             
-            <div class="col-lg-4">
-                <div class="card">
+            <div class="col-lg-4 mt-3">
+                <div class="card border-0">
                     <img src="{{product.image.url}}" alt="{{product.name}}">
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-6 mt-3">
                 
     
-                <h4 class="text-warning font-weight-bold">{{product.name}}</h4>
-    
+                <h4 >{{product.name}}</h4>
+                <h6> ${{product.price}}</h6>
+                <div class="rating text-danger">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <a href="#" class="text-secondary">3 Review(s)/ Add Review</a>
+                </div>
+               
+                <label class="fw-bolder">Availability:</label>
+                <small>{{product.status}}</small>
                 <p> {{product.description}}</p>
-    
+                <label>QTY</label>
+                <input type="number" size="2">
+                <a href="" class=" btn btn-sm btn-danger"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;ADD TO CART</a>
             </div>
         </div>
 
