@@ -27,3 +27,6 @@
     }
    
 }
+.nav-tabs > .active > a{
+    color: #dc3545 !important;  
+}
