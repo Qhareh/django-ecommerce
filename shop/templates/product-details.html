@@ -44,41 +44,138 @@
         </div>
         <div class="col-lg-12 mt-5 ">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
-               
-                <li class="nav-item">
-                  <a class="nav-link text-dark fw-bold" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="false">DETAILS</a>
+
+                <li class="nav-item ">
+                    <a class="nav-link active text-dark fw-bold " id="details-tab" data-toggle="tab" href="#details"
+                        role="tab" aria-controls="details" aria-selected="false">DETAILS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark fw-bold" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">REVIEWS</a>
+                    <a class="nav-link text-dark fw-bold" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab"
+                        aria-controls="reviews" aria-selected="false">REVIEWS</a>
                 </li>
-              </ul>
-              <div class="tab-content" id="myTabContent">
-                
-                <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
+            </ul>
+            <div class="tab-content" id="myTabContent">
+
+                <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
                     <pre>{{product.description}}</pre>
                 </div>
-                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-                    <p>my review</p>
+                <div class="tab-pane fade in" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <div class="row mt-2">
+                                <div class="col-lg-8">
+                                    <i class="fa fa-user"
+                                        aria-hidden="true">&nbsp;Cindy</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-clock-o" aria-hidden="true">&nbsp;12 July 2022/ 8am</i>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="rating text-danger">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 mt-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique alias dolores
+                                        suscipit iusto exercitationem rerum illo non labore, tenetur vitae fuga maxime
+                                        adipisci inventore earum necessitatibus pariatur iure quisquam voluptates!</p>
+                                </div>
+
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-8">
+                                    <i class="fa fa-user"
+                                        aria-hidden="true">&nbsp;Judy</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-clock-o" aria-hidden="true">&nbsp;12 July 2022/ 8am</i>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="rating text-danger">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 mt-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique alias dolores
+                                        suscipit iusto exercitationem rerum illo non labore, tenetur vitae fuga maxime
+                                        adipisci inventore earum necessitatibus pariatur iure quisquam voluptates!</p>
+                                </div>
+
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-8">
+                                    <i class="fa fa-user"
+                                        aria-hidden="true">&nbsp;Ivy</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fa fa-clock-o" aria-hidden="true">&nbsp;12 July 2022/ 8am</i>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="rating text-danger">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 mt-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique alias dolores
+                                        suscipit iusto exercitationem rerum illo non labore, tenetur vitae fuga maxime
+                                        adipisci inventore earum necessitatibus pariatur iure quisquam voluptates!</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h4>WRITE YOUR REVIEW</h4>
+                            <P>Your email address will not be published</P>
+                            <form class="mt-2" method="POST" id="#">
+                                <div class="mb-4">
+                                    <input class="form-control" placeholder="Your Name" name="name" type="name"
+                                        required />
+                                </div>
+                                <div class="mb-4">
+                                    <input class="form-control" placeholder="Your Email Address" name="name" type="name"
+                                        required />
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" placeholder="Your review.." name="review"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="fw-bold">YOUR RATING:</label>
+                                    <span class="ratings text-danger">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="mb-4 ">
+                                    <button type="submit" class="btn btn-danger "><i class="fa fa-paper-plane"
+                                            aria-hidden="true"></i> &nbsp SUBMIT</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
-
-
-    <h4 class="font-weight-bold">More like this</h4>
-    <div class="row">
-        {% for product in more_products %}
-        {% include 'layouts/products.html' %}
-        {% endfor %}
-    </div>
 </div>
+
 {% endblock %}
 
 {% block scripts %}
 <script>
     $('#myTab a').on('click', function (e) {
-    e.preventDefault()
-    $(this).tab('show')
+        e.preventDefault()
+        $(this).tab('show')
     })
+
 </script>
-{% endblock %} 
+{% endblock %}

@@ -28,9 +28,10 @@
 
         <div class="col-sm-3 mb-4">
             <div class="card">
-                <img class="img-fluid" src="{{product.image.url}}">
+                <a href="{% url 'product.details' product.id %}"> <img src="{{product.image.url}}" class="img-fluid "></a>
                 <div class="card-body">
                     <h6>{{product.name}}</h6>
+                    <small>${{product.price}}</small><br>
                     <div class="rating text-danger">
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -38,7 +39,7 @@
                         <i class="fa fa-star-half-o" aria-hidden="true"></i>
                         <i class="fa fa-star-o" aria-hidden="true"></i>
                     </div>
-                    <small>${{product.price}}</small><br>
+                   
                 </div>
             </div>
         </div>

@@ -3,7 +3,8 @@
     <div class="card mb-4 shadow-lg border-0 hover-overlay hover-zoom hover-shadow">
         <a href="{% url 'product.details' product.id %}"> <img src="{{product.image.url}}" class="img-fluid "></a>
         <div class="card-body ">  
-            <h6>{{product.category}}</h6>
+            <h6>{{product.name}}</h6>
+             <small>Ksh.{{product.price}}</small><br>
             <div class="rating text-danger">
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -11,7 +12,7 @@
                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
                 <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
-            <small>Ksh.{{product.price}}</small><br>
+           
             
         </div>
     </div>
