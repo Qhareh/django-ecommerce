@@ -30,8 +30,8 @@
                 <div class="col-lg-8">
                     <label>QTY</label>
                     <input type="number" class="w-25">
-                    <a href="" class=" btn btn-sm btn-danger"><i class="fa fa-shopping-cart"
-                            aria-hidden="true"></i>&nbsp;&nbsp;ADD TO CART</a>
+                    <button href="" class=" btn btn-sm btn-danger update-cart" data-product="{{product.id}}" data-action="add"><i class="fa fa-shopping-cart"
+                            aria-hidden="true"></i>&nbsp;&nbsp;ADD TO CART</button>
                 </div>
                 <div class="col-lg-4 ">
                     <button class="btn btn-sm btn-outline-dark"><i class="fa fa-heart" aria-hidden="true"></i></button>
@@ -51,7 +51,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark fw-bold" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab"
-                        aria-controls="reviews" aria-selected="false">REVIEWS</a>
+                        aria-controls="reviews" aria-selected="false">REVIEWS (3)</a>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -155,7 +155,7 @@
                                     </span>
                                 </div>
                                 <div class="mb-4 ">
-                                    <button type="submit" class="btn btn-danger "><i class="fa fa-paper-plane"
+                                    <button type="submit" class="btn btn-danger" ><i class="fa fa-paper-plane"
                                             aria-hidden="true"></i> &nbsp SUBMIT</button>
                                 </div>
 
@@ -171,11 +171,4 @@
 {% endblock %}
 
 {% block scripts %}
-<script>
-    $('#myTab a').on('click', function (e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
-
-</script>
 {% endblock %}
