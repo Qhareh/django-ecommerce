@@ -1,10 +1,10 @@
 .active-nav{
     color: #dc3545 !important;
 }
-.card{
+.product-card{
     transition: 0.5s
   }
-.card:hover{
+.product-card:hover{
     transform: scale(0.9 ,1);
 }
 .offer{

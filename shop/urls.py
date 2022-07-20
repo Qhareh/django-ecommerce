@@ -11,6 +11,8 @@ urlpatterns = [
     path('form/success', successRedirect, name="success.redirect"),
     path("ajax/contact/submission", ajaxContactSubmission, name="contact.ajax.submission"),
     path("product/details/<id>", getProductDetails, name="product.details"),
-    path("search/products", searchProducts, name="search")
+    path("search/products", searchProducts, name="search"),
+    path('cart', cart, name="cart"),
+    path('checkout', checkout, name="checkout")
   ]
 
