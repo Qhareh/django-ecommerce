@@ -8,13 +8,14 @@
                 <form class="mt-2" method="POST" id="contactForm">
                     {% csrf_token %}
                     <div class="row">
+                        <p class="fw-bold">Shipping information</p>
                         <div class="col-lg-6 mb-4">
                             <input class="form-control" placeholder="Your Name" name="name" type="name" required />
                         </div>
                         <div class=" col-lg-6 mb-4">
                             <input class="form-control" placeholder="Email" name="email" type="email" required />
                         </div>
-                        <p>Shipping information</p>
+                        
                         <div class="col-lg-6 mb-4">
                             <input class="form-control" placeholder="Address" name="address" type="address" required />
                         </div>
