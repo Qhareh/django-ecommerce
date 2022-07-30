@@ -119,11 +119,25 @@ def checkout(request):
     return render(request, "checkout.html", context)
 
 def updateItem(request):
-    # data = json.loads(request.body)
-    # productId = data ['productId']
-    # action = data['action ']
+    data = json.loads(request.body)
+    productId = data ['productId']
+    action = data['action']
 
-    # print('Action :', action)
-    # print('productId:', productId)
+    print('Action :', action)
+    print('productId:', productId)
     
+    customer = request.user.username  
+    product = product.objects.get(id=productId)
+    order, created = order.objects.get_or_create(customer=customer, complete=False)
+    orderItem, created = orderItem.objects.get_or_create(order=order, product=product) 
+
+    if action == 'add':
+        orderItem.quantity = (orderItem.quantity + 1)
+    elif action == 'remove':
+         orderItem.quantity = (orderItem.quantity - 1)
+
+    orderItem.save()
+
+    if  orderItem.quantity <= 0:
+        orderItem.delete()
     return JsonResponse ('item was added', safe=False)
