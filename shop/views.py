@@ -126,9 +126,9 @@ def updateItem(request):
     print('Action :', action)
     print('productId:', productId)
     
-    customer = request.user.username  
-    product = product.objects.get(id=productId)
-    order, created = order.objects.get_or_create(customer=customer, complete=False)
+    customer = request.user.user_id
+    product = Product.objects.get(id=productId)
+    order, created = Order.objects.get_or_create(customer=customer)
     orderItem, created = orderItem.objects.get_or_create(order=order, product=product) 
 
     if action == 'add':
